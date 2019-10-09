@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Animais
+    </ion-title>
+    <ion-button slot="primary" (click)="cadastrarAnimal()">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <div *ngFor="let animal of animalList" (click)="showInfoAnimal(animal)">
+      <h2>{{animal.nome}}</h2>
+      <p>{{animal.numeracao}}</p>
+      <ion-button>
+        info
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>
