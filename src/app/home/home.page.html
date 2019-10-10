@@ -1,21 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Lista de Animais
-    </ion-title>
-    <ion-button slot="primary" (click)="cadastrarAnimal()">
-      <ion-icon slot="icon-only" name="more"></ion-icon>
-    </ion-button>
+  <ion-toolbar color="primary">
+    <div class="header-top">
+      <ion-title class="title-app" color="light" slot="start">
+        LISTA DE ANIMAIS
+      </ion-title>
+      <ion-button color="light" fill="clear" slot="end" (click)="cadastrarAnimal()">
+        <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-searchbar color="center" [(ngModel)]="searchTerm" (ionChange)="getItems()">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <div *ngFor="let animal of animalList" (click)="showInfoAnimal(animal)">
-      <h2>{{animal.nome}}</h2>
-      <p>{{animal.numeracao}}</p>
-      <ion-button>
-        info
+    <div class="animal-container" *ngFor="let animal of animalList" (click)="showInfoAnimal(animal)">
+      <div class="animal-info">
+        <p class="animal-number">{{animal.numeracao}}</p>
+        <h2 class="animal-name">{{animal.nome}}</h2>
+
+      </div>
+      <ion-button fill="clear" class="button-animal" slot="" (click)="moreOptions(animal, $event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
       </ion-button>
     </div>
   </ion-list>

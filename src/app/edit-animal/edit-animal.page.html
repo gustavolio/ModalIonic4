@@ -1,44 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastrar-animal</ion-title>
-    <ion-button fill="clear" slot="end" (click)="closeModal()">
-      <ion-icon slot="icon-only" name="close-circle"></ion-icon>
-    </ion-button>
+    <ion-title>Editar Animal</ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item>
       <ion-label floating>Nome:</ion-label>
-      <ion-input [(ngModel)]="nomeCad" type="text" #nome></ion-input>
+      <ion-input [(ngModel)]="animalEdit.nome" type="text" #nome></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Numeracao:</ion-label>
-      <ion-input [(ngModel)]="numCad" type="number" #numeracao></ion-input>
+      <ion-input [(ngModel)]="animalEdit.numeracao" type="number" #numeracao></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Sexo:</ion-label>
-      <ion-select [(ngModel)]="sexCad" #sexo>
+      <ion-select [(ngModel)]="animalEdit.sexo" #sexo>
         <ion-select-option value="macho">Macho</ion-select-option>
         <ion-select-option value="femea">Femea</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label floating>Raca:</ion-label>
-      <ion-select [(ngModel)]="racaCad" #raca>
+      <ion-select [(ngModel)]="animalEdit.raca" #raca>
         <ion-select-option value="pincher">Pincher</ion-select-option>
         <ion-select-option value="poodle">Poodle</ion-select-option>
         <ion-select-option value="boxer">Boxer</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-button (click)="cadastrarAnimal(nomeCad, numCad, sexCad, racaCad)">Cadastrar</ion-button>
+      <ion-button (click)="editarAnimal()">Cadastrar</ion-button>
       <ion-button (click)="closeModal()">Cancelar</ion-button>
     </ion-item>
-
   </ion-list>
-
-
 </ion-content>

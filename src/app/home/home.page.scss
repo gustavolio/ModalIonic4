@@ -1,1 +1,28 @@
+.header-top{
+    display: flex;
+}
 
+.title-app{
+    font-weight: bold;
+}
+
+.animal-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.animal-info{
+    display: flex;
+}
+
+.animal-number {
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}

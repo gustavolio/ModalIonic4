@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>info-animal</ion-title>
+    <ion-button fill="clear" slot="end" (click)="closeModal()">
+      <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <p>{{animal.nome}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Numeracao:</ion-label>
+      <p>{{animal.numeracao}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sexo:</ion-label>
+      <p>{{animal.sexo}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Raca:</ion-label>
+      <p>{{animal.raca}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

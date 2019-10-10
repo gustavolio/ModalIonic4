@@ -18,9 +18,7 @@ export class CadastrarAnimalPage implements OnInit {
 
   closeModal() {
     this.modalCtrl.dismiss({
-
     });
-    console.log("Fechando Modal Cadastro");
   }
 
   cadastrarAnimal(nome, number, sexo, raca): void {
@@ -38,7 +36,6 @@ export class CadastrarAnimalPage implements OnInit {
         'animal': animal
       })
     }
-
   }
 
 }
